@@ -1,14 +1,11 @@
 const mainDiv = document.querySelector('.main-div');
 
-createGrid();
-
-const divs = document.querySelectorAll('.horizontal-div, .vertical-div');
-divs.forEach(div => div.addEventListener('mouseover', () => {
-    div.style.backgroundColor = 'black';
-}));
-
 function createGrid() {
-    let gridSize = prompt('Enter the number of boxes per side:');
+    let gridSize = 0;
+    while (!(gridSize > 0 && gridSize <= 100)) {
+        gridSize = prompt('Enter the number of boxes per side:');
+        if (gridSize === null) break;
+    }
     for (let i = 0; i < gridSize; i++) {
         const verticalDiv = document.createElement('div');
         verticalDiv.classList.add('vertical-div');
@@ -19,4 +16,8 @@ function createGrid() {
             verticalDiv.appendChild(horizontalDiv);
         }
     }
+    const divs = document.querySelectorAll('.horizontal-div, .vertical-div');
+    divs.forEach(div => div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = 'black';
+    }));
 }
