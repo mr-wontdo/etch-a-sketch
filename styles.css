@@ -22,8 +22,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 64px;
-    width: 100%;
+    min-height: 64px;
+    min-width: 100%;
 }
 
 button.reset-grid {
@@ -36,8 +36,8 @@ button.reset-grid {
     border: 1px solid white;
     display: flex;
     flex-direction: column;
-    height: 960px;
-    width: 960px;
+    min-height: 960px;
+    min-width: 960px;
 }
 
 .vertical-div {
