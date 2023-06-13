@@ -1,4 +1,9 @@
 const mainDiv = document.querySelector('.main-div');
+const resetGridButton = document.querySelector('.reset-grid');
+
+resetGridButton.addEventListener('click', () => {
+    createGrid();
+});
 
 function createGrid() {
     let gridSize = 0;
