@@ -33,6 +33,7 @@ button.reset-grid {
 }
 
 .main-div {
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
     height: 960px;
@@ -41,7 +42,6 @@ button.reset-grid {
 
 .vertical-div {
     background-color: gray;
-    border: 1px solid white;
     display: flex;
     flex-grow: 1;
 }
