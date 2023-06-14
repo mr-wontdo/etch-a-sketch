@@ -1,8 +1,13 @@
 const mainDiv = document.querySelector('.main-div');
-const resetGridButton = document.querySelector('.reset-grid');
 
+const resetGridButton = document.querySelector('.reset-grid');
 resetGridButton.addEventListener('click', () => {
     createGrid();
+});
+
+const clearGridButton = document.querySelector('.clear-grid');
+clearGridButton.addEventListener('click', () => {
+    clearGrid();
 });
 
 function createGrid() {
@@ -25,4 +30,11 @@ function createGrid() {
     divs.forEach(div => div.addEventListener('mouseover', () => {
         div.style.backgroundColor = 'black';
     }));
+}
+
+function clearGrid() {
+    const divs = document.querySelectorAll('.horizontal-div, .vertical-div');
+    divs.forEach(div => {
+        div.style.backgroundColor = 'gray';
+    });
 }
