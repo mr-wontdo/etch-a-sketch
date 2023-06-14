@@ -11,6 +11,7 @@ clearGridButton.addEventListener('click', () => {
 });
 
 function createGrid() {
+    removeGrid();
     let gridSize = 0;
     while (!(gridSize > 0 && gridSize <= 100)) {
         gridSize = prompt('Enter the number of boxes per side:');
@@ -37,4 +38,16 @@ function clearGrid() {
     divs.forEach(div => {
         div.style.backgroundColor = 'gray';
     });
+}
+
+function removeGrid() {
+    const verticalDivs = document.querySelectorAll('.vertical-div');
+    verticalDivs.forEach(vdiv => {
+        while(vdiv.firstChild) {
+            vdiv.removeChild(vdiv.lastChild);
+        }
+    });
+    while(mainDiv.firstChild) {
+        mainDiv.removeChild(mainDiv.lastChild);
+    }
 }
