@@ -26,7 +26,7 @@ body {
     min-width: 100%;
 }
 
-button.reset-grid,
+button.create-grid,
 button.clear-grid {
     background-color: gray;
     color: white;
