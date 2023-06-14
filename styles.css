@@ -1,6 +1,5 @@
 * {
     background-color: #111827;
-    /* border: 1px solid white; */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -26,15 +25,22 @@ body {
     min-width: 100%;
 }
 
+.buttons {
+    display: flex;
+    gap: 24px;
+}
+
 button.create-grid,
 button.clear-grid {
     background-color: gray;
     color: white;
+    font-weight: bold;
     padding: 10px 20px;
 }
 
 .main-div {
-    border: 1px solid white;
+    background-color: white;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     min-height: 960px;
@@ -42,13 +48,13 @@ button.clear-grid {
 }
 
 .vertical-div {
-    background-color: gray;
+    background-color: white;
     display: flex;
     flex-grow: 1;
 }
 
 .horizontal-div {
-    background-color: gray;
-    border: 1px solid white;
+    background-color: white;
+    border: 1px solid gray;
     flex-grow: 1;
 }
