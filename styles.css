@@ -30,8 +30,7 @@ body {
     gap: 24px;
 }
 
-button.create-grid,
-button.clear-grid {
+button {
     background-color: gray;
     color: white;
     font-weight: bold;
