@@ -10,6 +10,22 @@ clearGridButton.addEventListener('click', () => {
     clearGrid();
 });
 
+const blackColorButton = document.querySelector('.black-color');
+blackColorButton.addEventListener('click', () => {
+    const divs = document.querySelectorAll('.horizontal-div, .vertical-div');
+    divs.forEach(div => div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = 'black';
+    }));
+});
+
+const rainbowColorButton = document.querySelector('.rainbow-color');
+rainbowColorButton.addEventListener('click', () => {
+    const divs = document.querySelectorAll('.horizontal-div, .vertical-div');
+    divs.forEach(div => div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = getRandomColor();
+    }));
+});
+
 function createGrid() {
     removeGrid();
     let gridSize = 0;
