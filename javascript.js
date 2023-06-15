@@ -30,7 +30,7 @@ function createGrid() {
     removeGrid();
     let gridSize = 0;
     while (!(gridSize > 0 && gridSize <= 100)) {
-        gridSize = prompt('Enter the number of boxes per side:');
+        gridSize = prompt('Enter a number between 1 and 100 to set the size of the grid:');
         if (gridSize === null) break;
     }
     for (let i = 0; i < gridSize; i++) {
