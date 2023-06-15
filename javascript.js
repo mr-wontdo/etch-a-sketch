@@ -51,3 +51,11 @@ function removeGrid() {
         mainDiv.removeChild(mainDiv.lastChild);
     }
 }
+
+function getRandomColor() {
+    let randomColor = '#';
+    for (let i = 0; i < 6; i++) {
+        randomColor += Math.floor(Math.random() * 10);
+    }
+    return randomColor;
+}
