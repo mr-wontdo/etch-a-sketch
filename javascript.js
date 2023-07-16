@@ -26,6 +26,16 @@ rainbowColorButton.addEventListener('click', () => {
     }));
 });
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+        button.style.backgroundColor = '#502C18';
+    });
+    button.addEventListener('mouseleave', () => {
+        button.style.backgroundColor = '#8D5F48';
+    });
+});
+
 function createGrid() {
     removeGrid();
     let gridSize = 0;
@@ -69,7 +79,7 @@ function removeGrid() {
 }
 
 function getRandomColor() {
-    let colors = ['#CC99C9', '#9EC1CF', '#9EE09E', '#FDFD97', '#FEB144', '#FF6663'];
+    const colors = ['#CC99C9', '#9EC1CF', '#9EE09E', '#FDFD97', '#FEB144', '#FF6663'];
     let randomNumber = Math.floor(Math.random() * 6);
     return colors[randomNumber];
 }
