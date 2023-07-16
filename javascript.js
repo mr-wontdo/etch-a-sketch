@@ -69,9 +69,7 @@ function removeGrid() {
 }
 
 function getRandomColor() {
-    let randomColor = '#';
-    for (let i = 0; i < 6; i++) {
-        randomColor += Math.floor(Math.random() * 10);
-    }
-    return randomColor;
+    let colors = ['#CC99C9', '#9EC1CF', '#9EE09E', '#FDFD97', '#FEB144', '#FF6663'];
+    let randomNumber = Math.floor(Math.random() * 6);
+    return colors[randomNumber];
 }
