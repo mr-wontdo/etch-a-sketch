@@ -52,7 +52,7 @@ function createGrid() {
 function clearGrid() {
     const divs = document.querySelectorAll('.horizontal-div, .vertical-div');
     divs.forEach(div => {
-        div.style.backgroundColor = 'white';
+        div.style.backgroundColor = '#EADAB7';
     });
 }
 
